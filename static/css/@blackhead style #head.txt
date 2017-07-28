@@ -1,0 +1,9 @@
+color: white;
+font-family: AeroMaticsBold;
+font-size: 445%;
+background: #3c3c3c;
+padding-left: 10px;
+padding-right: 10px;
+width: 97%;
+height: 300px;
+padding-top: 17px;

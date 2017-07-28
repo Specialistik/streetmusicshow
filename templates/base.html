@@ -12,6 +12,7 @@
     {% endblock %}
 </head>
 <body>
+<center>
     <table width="820" border="0">
     <tbody>
         <tr>
@@ -23,7 +24,7 @@
                     <br>
                     <div id="hr"></div>
                     <div id="logo">
-                        <img src="img/logo.jpg" width="100%" height="100%">
+                        <img src="/static/img/logo.jpg" width="100%" height="100%">
                     </div>
                         <br><br><br><br>
                     <div id="hr"></div>
@@ -35,37 +36,16 @@
                         </ul>
                     </div>
                     <br>
+
+
                     <div id="content" style="display: block;">
+                        {% block content %}
 
-                        <div id="h1">
-                            <b>К</b>рупный заголовок
-                        </div>
-                        <div id="h2">
-                            Мелкий текст-заголовок, краткое описание
-                        </div>
-                        <div id="h3">
-                            Ещё более мелкий текст, здесь можно в подробностях описать шоу, комментировать им фотографии, короче
-                            содержание уже придумывается не мной. Ещё более мелкий текст, здесь можно в подробностях описать шоу,
-                            комментировать им фотографии, короче содержание уже придумывается не мной. Ещё более мелкий текст,
-                            здесь можно в подробностях описать шоу, комментировать им фотографии, короче содержание уже придумывается
-                            не мной. Ещё более мелкий текст, здесь можно в подробностях описать шоу, комментировать им фотографии,
-                            короче содержание уже придумывается не мной.
-                        </div>
-
-                    <div id="hr"></div><br>
-                        <div id="stream_head" onclick="view('stream_content'); return false">
-                            <center>
-                            <div class="stream_h1">Прямой эфир</div>
-                            <div class="stream_h2">(нажмите чтобы посмотреть)</div>
-                            </center>
-                        </div>
-
-                        <div id="stream_content" style="display: block;">
-                            <iframe width="100%" height="480" src="https://www.youtube.com/embed/t8XjH9CGkAw" frameborder="0" allowfullscreen=""></iframe>
-                        </div>
+                        {% endblock %}
                     </div>
-                    <div id="hr"></div>
+                        <div id="hr"></div>
                     <br>
+
                     <div id="partners_header"><b>П</b>артнёры</div>
 
                     <div id="partners_content">
@@ -99,6 +79,6 @@
         </tr>
     </tbody>
 </table>
-
+</center>
 </body>
 </html>

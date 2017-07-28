@@ -1,0 +1,75 @@
+@font-face {
+	font-family: 'ArchiveRegular';
+	src: url('../fonts/ArchiveRegular.ttf');
+}
+@font-face {
+	font-family: 'ChunkFive';
+	src: url('../fonts/ChunkFive.ttf');
+}
+@font-face {
+	font-family: 'AeroMaticsBold';
+	src: url('../fonts/AeroMaticsBold.ttf');
+}
+@font-face {
+	font-family: 'AeroMaticsBoldItalic';
+	src: url('../fonts/AeroMaticsBoldItalic.ttf');
+}
+@font-face {
+	font-family: 'EtelkaMediumProRegular';
+	src: url('../fonts/EtelkaMediumProRegular.ttf');
+}
+
+body {
+}
+
+#head{
+	color:				#3c3c3c;
+	font-family: 		AeroMaticsBold;
+	//font-size:		410%;
+	font-size:			683%;
+}
+
+#menu ul li a{	
+	color:				#3c3c3c;
+	font-family: 		AeroMaticsBold;
+	font-weight: 		5000px;
+	font-size:			190%;
+}
+
+#h1{
+	font-family: 		ChunkFive;
+	color:				#3c3c3c;
+	font-size:			480%;
+}
+
+#h2{
+	font-family: 		AeroMaticsBold;
+	color:				#3c3c3c;
+	font-size:			280%;
+}
+
+#h3{
+	font-family: 		AeroMaticsBold;
+	color:				#3c3c3c;
+	font-size:			180%;
+}
+
+#partners_header{
+	color:				#3c3c3c;
+	font-family:		AeroMaticsBold;
+	font-weight:		40;
+	font-size:			240%;
+}
+
+#stream_head{	
+	font-family:		Tahoma;
+}
+.stream_h1{
+	font-size:			190%;
+	font-weight:		600;
+	color:				#1f1f1f;
+	font-family:		EtelkaMediumProRegular;
+}
+.stream_h2{
+	font-size:			100%;
+}

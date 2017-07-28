@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <script type="text/javascript">
+		function view(n) {
+			style = document.getElementById(n).style;
+			style.display = (style.display == 'block') ? 'none' : 'block';
+		}
+	</script>
+{% endblock %}
+
+{% block content %}
+    <div id="h1">
+        {{ main_page.title }}
+    </div>
+
+    <div id="h3">
+        {{ main_page.description }}
+    </div>
+    {% comment %}
+    <div id="hr"></div><br>
+
+    <div id="stream_head" onclick="view('stream_content'); return false">
+        <center>
+        <div class="stream_h1">Прямой эфир</div>
+        <div class="stream_h2">(нажмите чтобы посмотреть)</div>
+        </center>
+    </div>
+
+    <div id="stream_content" style="display: block;">
+        <iframe width="100%" height="480" src="https://www.youtube.com/embed/t8XjH9CGkAw" frameborder="0" allowfullscreen=""></iframe>
+    </div>
+    {% endcomment %}
+{% endblock %}
