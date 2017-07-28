@@ -1,0 +1,104 @@
+<html>
+<head>
+	<link rel="stylesheet" href="/static/css/fonts.css">
+	<link rel="stylesheet" href="/static/css/positions.css">
+
+	<meta charset="utf-8">
+
+	<title>Street Music Show</title>
+
+    {% block head %}
+
+    {% endblock %}
+</head>
+<body>
+    <table width="820" border="0">
+    <tbody>
+        <tr>
+            <td>
+                <div id="wrapper">
+                    <div id="head">
+                        <b>Street Music Show</b>
+                    </div>
+                    <br>
+                    <div id="hr"></div>
+                    <div id="logo">
+                        <img src="img/logo.jpg" width="100%" height="100%">
+                    </div>
+                        <br><br><br><br>
+                    <div id="hr"></div>
+                    <div id="menu">
+                        <ul>
+                            <li><b><a href="/"> О нас	</a></b></li>
+                            <li><b><a href="/photos">Фото	</a></b></li>
+                            <li><b><a href="/videos">Видео	</a></b></li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div id="content" style="display: block;">
+
+                        <div id="h1">
+                            <b>К</b>рупный заголовок
+                        </div>
+                        <div id="h2">
+                            Мелкий текст-заголовок, краткое описание
+                        </div>
+                        <div id="h3">
+                            Ещё более мелкий текст, здесь можно в подробностях описать шоу, комментировать им фотографии, короче
+                            содержание уже придумывается не мной. Ещё более мелкий текст, здесь можно в подробностях описать шоу,
+                            комментировать им фотографии, короче содержание уже придумывается не мной. Ещё более мелкий текст,
+                            здесь можно в подробностях описать шоу, комментировать им фотографии, короче содержание уже придумывается
+                            не мной. Ещё более мелкий текст, здесь можно в подробностях описать шоу, комментировать им фотографии,
+                            короче содержание уже придумывается не мной.
+                        </div>
+
+                    <div id="hr"></div><br>
+                        <div id="stream_head" onclick="view('stream_content'); return false">
+                            <center>
+                            <div class="stream_h1">Прямой эфир</div>
+                            <div class="stream_h2">(нажмите чтобы посмотреть)</div>
+                            </center>
+                        </div>
+
+                        <div id="stream_content" style="display: block;">
+                            <iframe width="100%" height="480" src="https://www.youtube.com/embed/t8XjH9CGkAw" frameborder="0" allowfullscreen=""></iframe>
+                        </div>
+                    </div>
+                    <div id="hr"></div>
+                    <br>
+                    <div id="partners_header"><b>П</b>артнёры</div>
+
+                    <div id="partners_content">
+                        <table width="100%" border="0" cellspacing="7">
+                            <tbody>
+                                <tr>
+                                    <td height="60" bgcolor="#fe9b8b"></td>
+                                    <td height="40" bgcolor="#ede47d"></td>
+                                    <td height="40" bgcolor="#fed08b"></td>
+                                    <td height="40" bgcolor="#aafe8b"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="copyright">
+                        <table width="100%" border="0">
+                            <tbody>
+                                <tr>
+                                    <td width="1%"></td>
+                                    <td width="10%">Anima</td>
+                                    <td width="*"></td>
+                                    <td width="10%" align="right">2017</td>
+                                    <td width="1%"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
