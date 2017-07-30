@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-from models import MainPage
+from models import MainPage, Photo
 
 
 def index(request):
@@ -10,7 +10,7 @@ def index(request):
 
 
 def photos(request):
-    return render(request, 'photos.html')
+    return render(request, 'photos.html', {'photos':Photo.objects.all()})
 
 
 def videos(request):

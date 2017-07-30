@@ -15,6 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
+
 from core import views as core_views
 
 
@@ -23,4 +26,4 @@ urlpatterns = [
     url(r'^$', core_views.index),
     url(r'^photos', core_views.photos),
     url(r'^videos$', core_views.videos),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
