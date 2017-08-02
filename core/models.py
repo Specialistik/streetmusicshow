@@ -28,6 +28,14 @@ class Photo(models.Model):
     #title = models.CharField(max_length=80, verbose_name=u"Название")
     image = ImageField(upload_to='photos', verbose_name=u"Фотография")
 
+    """
+    def image_tag(self):
+        return u'<img src="%s" />' % self.image.url
+
+    image_tag.short_description = 'Image'
+    image_tag.allow_tags = True
+    """
+
     class Meta:
         db_table = 'photos'
         verbose_name = u'Фотография'
