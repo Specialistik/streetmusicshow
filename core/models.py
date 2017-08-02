@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from sorl.thumbnail import ImageField
 
 
 class MainPage(models.Model):
@@ -24,17 +25,8 @@ class MainPage(models.Model):
 
 
 class Photo(models.Model):
-    title = models.CharField(max_length=80, verbose_name=u"Название")
-    image = models.ImageField(upload_to='photos', verbose_name=u"Фотография")
-
-    def __repr__(self):
-        return self.title if self.title is not None else u'empty'
-
-    def __str__(self):
-        return self.title if self.title is not None else u'empty'
-
-    def __unicode__(self):
-        return self.title if self.title is not None else u'empty'
+    #title = models.CharField(max_length=80, verbose_name=u"Название")
+    image = ImageField(upload_to='photos', verbose_name=u"Фотография")
 
     class Meta:
         db_table = 'photos'

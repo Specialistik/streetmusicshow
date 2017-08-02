@@ -10,7 +10,7 @@ def index(request):
 
 
 def photos(request):
-    return render(request, 'photos.html', {'photos':Photo.objects.all()})
+    return render(request, 'photos.html', {'photos': Photo.objects.all()})
 
 
 def videos(request):

@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core',
     'sorl.thumbnail',
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +129,5 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 MEDIA_URL = '/media/'
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
