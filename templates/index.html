@@ -10,13 +10,16 @@
 {% endblock %}
 
 {% block content %}
-    <div id="h1">
-        {{ main_page.title }}
-    </div>
+    {% for article in articles %}
+        <div id="h1">
+            {{ article.title }}
+        </div>
 
-    <div id="h3">
-        {{ main_page.description }}
-    </div>
+        <div id="h3">
+            {{ article.description|safe }}
+        </div>
+        <div id="hr"></div>
+    {% endfor %}
     {% comment %}
     <div id="hr"></div><br>
 

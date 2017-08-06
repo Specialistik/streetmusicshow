@@ -6,7 +6,7 @@ from models import MainPage, Photo
 
 
 def index(request):
-    return render(request, 'index.html', {'main_page': MainPage.objects.first()})
+    return render(request, 'index.html', {'articles': MainPage.objects.all()})
 
 
 def photos(request):
