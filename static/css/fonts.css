@@ -24,9 +24,9 @@ body {
 
 #head{
 	color:				#3c3c3c;
-	font-family: 		AeroMaticsBold;
-	//font-size:		410%;
-	font-size:			683%;
+	font-family: 		ChunkFive;
+	font-size:		    480%;
+	//font-size:			683%;
 }
 
 #menu ul li a{	
@@ -73,3 +73,4 @@ body {
 .stream_h2{
 	font-size:			100%;
 }
+

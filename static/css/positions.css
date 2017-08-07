@@ -152,6 +152,10 @@ user-select: none;
 	color:				#efefef;
 }
 
+#copyright{
+    cursor: pointer;
+}
+
 #photos{
 	width:				100%;
 	height:				auto;
