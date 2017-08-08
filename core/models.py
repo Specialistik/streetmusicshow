@@ -8,8 +8,8 @@ from ckeditor.fields import RichTextField
 
 class MainPage(models.Model):
     title = models.CharField(max_length=80, verbose_name=u"Заголовок")
-    description = RichTextField(null=True, blank=True, verbose_name=u"Описание")
-    image = ImageField(null=True, blank=True, upload_to='photos', verbose_name=u"Фотография")
+    description = models.TextField(null=True, blank=True, verbose_name=u"Описание")
+    image = ImageField(upload_to='article_pics', null=True, blank=True, verbose_name=u"Фотография")
 
     def __repr__(self):
         return self.title if self.title is not None else u'empty'

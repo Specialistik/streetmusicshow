@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load thumbnail %}
 
 {% block head %}
     <script type="text/javascript">
@@ -11,16 +12,20 @@
 
 {% block content %}
     {% for article in articles %}
-        <div id="h1">
+        <div class="h1">
             {{ article.title }}
         </div>
 
-        <div id="h3">
+        <div class="h3">
+            {% thumbnail article.image "261x180" crop="center" as art %}
+                <img src="{{ art.url }}" width="{{ art.width }}" height="{{ art.height }}">
+            {% endthumbnail %}
             {{ article.description|safe }}
         </div>
+        s<div id="hr"></div><br>
     {% endfor %}
     {% comment %}
-    <div id="hr"></div><br>
+
 
     <div id="stream_head" onclick="view('stream_content'); return false">
         <center>
