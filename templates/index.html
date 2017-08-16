@@ -12,30 +12,23 @@
 
 {% block content %}
     {% for article in articles %}
-        <div class="h1">
-            {{ article.title }}
-        </div>
+        <div class="article-content">
+            <div class="h1">
+                {{ article.title }}
+            </div>
 
-        <div class="h3">
-            {% thumbnail article.image "261x180" crop="center" as art %}
-                <img src="{{ art.url }}" width="{{ art.width }}" height="{{ art.height }}">
-            {% endthumbnail %}
-            {{ article.description|safe }}
+            <div class="article-description">
+                {% thumbnail article.image "261x180" crop="center" as art %}
+                    <img src="{{ art.url }}" width="{{ art.width }}" height="{{ art.height }}">
+                {% endthumbnail %}
+
+                <div class="h3">
+                    {{ article.description|safe }}
+                </div>
+            </div>
+
         </div>
-        s<div id="hr"></div><br>
+        <div style="clear: both"></div>
+        <div id="hr"></div><br>
     {% endfor %}
-    {% comment %}
-
-
-    <div id="stream_head" onclick="view('stream_content'); return false">
-        <center>
-        <div class="stream_h1">Прямой эфир</div>
-        <div class="stream_h2">(нажмите чтобы посмотреть)</div>
-        </center>
-    </div>
-
-    <div id="stream_content" style="display: block;">
-        <iframe width="100%" height="480" src="https://www.youtube.com/embed/t8XjH9CGkAw" frameborder="0" allowfullscreen=""></iframe>
-    </div>
-    {% endcomment %}
 {% endblock %}

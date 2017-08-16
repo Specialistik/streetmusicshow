@@ -76,3 +76,11 @@ body {
 	font-size:			100%;
 }
 
+.article-content {
+	display:block;
+}
+
+.article-description img {
+	float: left;
+}
+
