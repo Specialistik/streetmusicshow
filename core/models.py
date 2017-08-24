@@ -8,7 +8,7 @@ from ckeditor.fields import RichTextField
 
 class MainPage(models.Model):
     title = models.CharField(max_length=80, verbose_name=u"Заголовок")
-    description = models.TextField(null=True, blank=True, verbose_name=u"Описание")
+    description = RichTextField(null=True, blank=True, verbose_name=u"Описание")
     image = ImageField(upload_to='article_pics', null=True, blank=True, verbose_name=u"Фотография")
 
     def __repr__(self):

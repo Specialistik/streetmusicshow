@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^$', core_views.index),
     url(r'^photos', core_views.photos),
     url(r'^videos$', core_views.videos),
+    url(r'^article/([0-9]+)/$', core_views.article),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

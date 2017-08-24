@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load thumbnail %}
+
+{% block head %}
+    <script type="text/javascript">
+		function view(n) {
+			style = document.getElementById(n).style;
+			style.display = (style.display == 'block') ? 'none' : 'block';
+		}
+	</script>
+{% endblock %}
+
+{% block content %}
+    <div class="article-content">
+        <div class="h1">
+            {{ article.title }}
+        </div>
+
+        <div class="article-description">
+            {% thumbnail article.image "261x180" crop="center" as art %}
+                <img src="{{ art.url }}" width="{{ art.width }}" height="{{ art.height }}">
+            {% endthumbnail %}
+
+            <div class="h3">
+                {{ article.description|safe }}
+            </div>
+        </div>
+
+    </div>
+    <div style="clear: both"></div>
+    <div id="hr"></div><br>
+{% endblock %}

@@ -13,9 +13,11 @@
 {% block content %}
     {% for article in articles %}
         <div class="article-content">
-            <div class="h1">
-                {{ article.title }}
-            </div>
+            <a href="/article/{{ article.id }}" class="article-href">
+                <div class="h1">
+                    {{ article.title }}
+                </div>
+            </a>
 
             <div class="article-description">
                 {% thumbnail article.image "261x180" crop="center" as art %}
