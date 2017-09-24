@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 from django.utils.html import format_html
-from core.models import MainPage, Photo
+from core.models import MainPage, Photo, Video
 
 from sorl.thumbnail import get_thumbnail
 
@@ -19,3 +19,4 @@ class ModelPhoto(admin.ModelAdmin):
 
 admin.site.register(MainPage)
 admin.site.register(Photo, ModelPhoto)
+admin.site.register(Video)

@@ -42,3 +42,12 @@ class Photo(models.Model):
         db_table = 'photos'
         verbose_name = u'Фотография'
         verbose_name_plural = u'Фотографии'
+
+
+class Video(models.Model):
+    link = models.CharField(max_length=80, verbose_name=u"Ссылка на youtube video")
+
+    class Meta:
+        db_table = 'videos'
+        verbose_name = u'Видос'
+        verbose_name_plural = u'Видосы'

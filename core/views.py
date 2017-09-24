@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render, get_object_or_404
-from models import MainPage, Photo
+from models import MainPage, Photo, Video
 
 
 def index(request):
@@ -19,4 +19,4 @@ def photos(request):
 
 
 def videos(request):
-    return render(request, 'videos.html')
+    return render(request, 'videos.html', {'videos' : Video.objects.all()})
