@@ -87,3 +87,9 @@ body {
 .article-href {
 	text-decoration: none;
 }
+
+.show_more {
+	font-family: AeroMaticsBold;
+    font-size: 180%;
+	cursor: pointer;
+}

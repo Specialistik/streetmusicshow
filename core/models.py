@@ -7,9 +7,21 @@ from ckeditor.fields import RichTextField
 
 
 class MainPage(models.Model):
+    CASTRATION_LENGTH = 200
+
     title = models.CharField(max_length=80, verbose_name=u"Заголовок")
     description = RichTextField(null=True, blank=True, verbose_name=u"Описание")
     image = ImageField(upload_to='article_pics', null=True, blank=True, verbose_name=u"Фотография")
+
+    def castrated_description(self):
+        if len(self.description) > self.CASTRATION_LENGTH:
+            return self.description[:self.CASTRATION_LENGTH]
+        return self.description
+
+    def castration_required(self):
+        if len(self.description) > self.CASTRATION_LENGTH:
+            return True
+        return False
 
     def __repr__(self):
         return self.title if self.title is not None else u'empty'
@@ -27,7 +39,6 @@ class MainPage(models.Model):
 
 
 class Photo(models.Model):
-    #title = models.CharField(max_length=80, verbose_name=u"Название")
     image = ImageField(upload_to='photos', verbose_name=u"Фотография")
 
     """

@@ -1,6 +1,11 @@
 $(document).ready(function(){
-    $('.article-text').each(function(){
+    $('.show_more').click(function(e){
         var self = $(this);
-        //console.log(self, self.length);
+        e.preventDefault();
+
+        $.get($(this).attr('href'), function(response) {
+            self.closest('.article-description').find('.article-text').html(response);
+            self.remove();
+        });
     });
 });

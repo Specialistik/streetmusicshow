@@ -15,7 +15,7 @@
 {% block content %}
     {% for article in articles %}
         <div class="article-content">
-            <a href="/article/{{ article.id }}" class="article-href">
+            <a href="/article/{{ article.id }}/" class="article-href">
                 <div class="h1">
                     {{ article.title }}
                 </div>
@@ -27,8 +27,14 @@
                 {% endthumbnail %}
 
                 <div class="h3 article-text">
-                    {{ article.description|safe }}
+                    {{ article.castrated_description|safe }}
                 </div>
+
+                {% if article.castration_required %}
+                    <div style="clear: both"></div>
+                    <a class="show_more" href="/article/full/{{ article.id }}/">Показать полностью</a>
+                {% endif %}
+
             </div>
 
         </div>
